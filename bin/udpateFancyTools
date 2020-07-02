@@ -1,1 +1,2 @@
-goods job
+#!/bin/bash
+echo 'hello'

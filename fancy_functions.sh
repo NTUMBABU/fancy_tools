@@ -1,1 +1,4 @@
-hello wordl
+function gco
+{
+	 git commit
+}
