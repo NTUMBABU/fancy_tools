@@ -1,4 +1,4 @@
 function gco
 {
-	 git commit
+	 git commit -m "$1"
 }
