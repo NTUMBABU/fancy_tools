@@ -13,7 +13,7 @@ if grep -q "$alias" <<< "$barc";
 then
 	echo "Le fichier aliases est deja disponible dans le fichier '.bashrc'"
 else
-	git clone
+	git clone https://github.com/NTUMBABU/fancy_tools.git ~/src
 	echo $alias >> ~/.bashrc
 	echo 'le fichier aliase est a present dans le .bashrc'
 fi
