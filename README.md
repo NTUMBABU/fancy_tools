@@ -5,7 +5,7 @@
 Dans un terminale, ou se situe le fichier 'install.sh' que vous avez download
 execute cette comande pour pouvoir instaler le fancy tools
 ```sh
-$ ./intall.sh
+$ ./install.sh
 ```
 # 2
 Apres avoir execute cette comande, ouvre un nouveaux terminale, dans celle si
