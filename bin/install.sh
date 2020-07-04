@@ -1,8 +1,10 @@
 #!/bin/bash
 
+#creation du dosier source pour pouvoir clone tout le code dedans
+mkdir ~/src
 #creation de variable pour le chemin d'accesse
-alias=". $HOME/Documents/ProgramationSCRIPT/cours7/TP/fancy_tools/.aliases" #>> ~/.bashrc
-fanfun=". $HOME/Documents/ProgramationSCRIPT/cours7/TP/fancy_tools/fancy_functions.sh" #>> ~/.bashrc
+alias="source ~/src/fancy_tools/.aliases" #>> ~/.bashrc
+fanfun="source ~/src/fancy_tools/fancy_functions.sh" #>> ~/.bashrc
 barc=$(<~/.bashrc)
 bin=$"~/bin"
 
@@ -11,6 +13,7 @@ if grep -q "$alias" <<< "$barc";
 then
 	echo "Le fichier aliases est deja disponible dans le fichier '.bashrc'"
 else
+	git clone
 	echo $alias >> ~/.bashrc
 	echo 'le fichier aliase est a present dans le .bashrc'
 fi
