@@ -3,8 +3,8 @@
 #creation du dosier source pour pouvoir clone tout le code dedans
 mkdir ~/src
 #creation de variable pour le chemin d'accesse
-alias="source ~/src/fancy_tools/.aliases" #>> ~/.bashrc
-fanfun="source ~/src/fancy_tools/fancy_functions.sh" #>> ~/.bashrc
+alias="source ~/src/.aliases" #>> ~/.bashrc
+fanfun="source ~/src/fancy_functions.sh" #>> ~/.bashrc
 barc=$(<~/.bashrc)
 bin=$"~/bin"
 
@@ -15,7 +15,7 @@ then
 else
 	git clone https://github.com/NTUMBABU/fancy_tools.git ~/src
 	echo $alias >> ~/.bashrc
-	echo 'le fichier aliase est a present dans le .bashrc'
+	echo 'le fichier aliase est a present dans le  .bashrc'
 fi
 
 #pour verifier si le fichier fancy function exite
@@ -28,13 +28,13 @@ else
 fi
 
 #creation du fichier bin
-if [ -e "$bin" <<< "$HOME" ]
+if [ -d "$bin" ]
 then
-	cp ~/fancy_tools/bin/updateFancyTools ~/bin/updateFancyTools
+	cp ~/src/bin/updateFancyTools ~/bin/updateFancyTools
 else
 	mkdir ~/bin
 	export PATH=$PATH:$HOME/bin
-	cp ~/fancy_tools/bin/updateFancyTools ~/bin/updateFancyTools
+	cp ~/src/bin/updateFancyTools ~/bin/updateFancyTools
 fi
 
 
